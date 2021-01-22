@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="Theme.MADventrureTV" parent="@style/Theme.Leanback" />
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="colorControlActivated">@color/aqua</item>
+    </style>
+</resources>
