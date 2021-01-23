@@ -37,6 +37,7 @@ class MyQuests : Activity() {
     lateinit var filteredList : MutableList<QuestItem>
     lateinit var profile : Profile
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_quests)
@@ -62,7 +63,7 @@ class MyQuests : Activity() {
 
     fun initAdapter(list: MutableList<QuestItem>) {
 
-        val adapter = BestQuestsAdapter(list, baseContext)
+        val adapter = BestQuestsAdapter(list, applicationContext)
         val layoutManager = GridLayoutManager(baseContext, 3)
 
         rv_quests.adapter = adapter

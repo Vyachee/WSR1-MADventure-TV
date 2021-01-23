@@ -1,6 +1,7 @@
 package com.grinvald.madventruretv.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.grinvald.madventruretv.MyQuests
 import com.grinvald.madventruretv.R
+import com.grinvald.madventruretv.Tasks
 import com.grinvald.madventruretv.models.QuestItem
 import com.squareup.picasso.Picasso
 
@@ -49,6 +52,14 @@ class BestQuestsAdapter(questsList: MutableList<QuestItem>, context: Context) : 
         holder.tv_description.text = description
 
         Picasso.get().load(quest.mainPhoto).into(holder.iv_preview)
+
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            val intent = Intent(context, Tasks::class.java)
+            intent.putExtra("quest", quest)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
+
+        })
 
     }
 

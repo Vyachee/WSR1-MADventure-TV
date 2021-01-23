@@ -20,9 +20,9 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:fillViewport="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,10 +45,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/gotham"
                     android:text="My quests"
                     android:textColor="@color/aqua"
-                    android:fontFamily="@font/gotham"
-                    android:textSize="48sp"/>
+                    android:textSize="48sp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -59,37 +59,37 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:layout_marginRight="16dp"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/tv_nickname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:layout_marginRight="4dp"
+                            android:layout_weight="1"
                             android:fontFamily="@font/gotham"
+                            android:text="John Doe"
                             android:textColor="@color/aqua"
-                            android:textSize="24sp"
-                            android:text="John Doe" />
+                            android:textSize="24sp" />
 
                         <TextView
                             android:id="@+id/tv_logout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="right"
                             android:fontFamily="@font/gotham"
-                            android:textColor="#fff"
-                            android:text="Logout" />
+                            android:gravity="right"
+                            android:text="Logout"
+                            android:textColor="#fff" />
                     </LinearLayout>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        app:cardCornerRadius="100dp"
-                        android:layout_weight="1">
+                        android:layout_weight="1"
+                        app:cardCornerRadius="100dp">
 
                         <ImageView
                             android:id="@+id/iv_avatar"
@@ -105,18 +105,18 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/dark_rounded"
-                android:padding="16dp"
                 android:layout_marginTop="16dp"
-                android:orientation="horizontal">
+                android:background="@drawable/dark_rounded"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:text="Category:"
                     android:fontFamily="@font/gotham"
+                    android:text="Category:"
                     android:textColor="@color/aqua"
                     android:textSize="18sp" />
 
@@ -131,10 +131,10 @@
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:text="Words:"
                     android:layout_marginLeft="16dp"
+                    android:layout_weight="0"
                     android:fontFamily="@font/gotham"
+                    android:text="Words:"
                     android:textColor="@color/aqua"
                     android:textSize="18sp" />
 
@@ -157,8 +157,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
 
                 <LinearLayout
                     android:id="@+id/ll_search_btn"
@@ -194,9 +193,9 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_quests"
-                android:layout_marginTop="16dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
