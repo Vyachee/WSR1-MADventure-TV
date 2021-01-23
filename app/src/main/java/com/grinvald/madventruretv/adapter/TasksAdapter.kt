@@ -1,6 +1,7 @@
 package com.grinvald.madventruretv.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.grinvald.grinvaldmadventure.models.Task
+import com.grinvald.madventruretv.MapActivity
 import com.grinvald.madventruretv.R
 import com.grinvald.madventruretv.Tasks
 import com.grinvald.madventruretv.common.CacheHelper
@@ -54,6 +56,12 @@ class TasksAdapter(questsList: MutableList<Task>, context: Context) : RecyclerVi
 
         getTaskDetails(task, holder)
         getOnline(task.id, holder)
+
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            val intent = Intent(context, MapActivity::class.java)
+            intent.putExtra("task", task)
+            context.startActivity(intent)
+        })
 
     }
 
